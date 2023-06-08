@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
-
+import Button from '../../components/Button'
 
 const Login = () => {
       const navigate = useNavigate();
@@ -53,12 +53,8 @@ const Login = () => {
                                     {errors.password && <span className="text-red-500 text-xs italic">{errors.password.message}</span>}
                               </div>
                               <div className="flex items-center justify-center">
-                                    <button
-                                          type="submit"
-                                          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                    >
-                                          Login
-                                    </button>
+                              <Button type="submit" text={"SignUp"}></Button>
+                                    
                               </div>
                               <p className='text-md font-bold'>Already Registered? <Link className='text-green-400' to={'/signup'}>SignUp</Link></p>
 

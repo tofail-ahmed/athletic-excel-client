@@ -2,8 +2,10 @@ import { useContext } from "react";
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider'
+import Button from "../../components/Button";
 const SignUp = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || '/';
   const { createUser, updateUserProfile } = useContext(AuthContext)
   const {
     register,
@@ -17,13 +19,14 @@ const SignUp = () => {
     console.log(data);
     createUser(data.email, data.password)
       .then(result => {
-        console.log(result.user);
         updateUserProfile(data.name, data.photoURL)
-          .then((error) => {
-            console.log(error);
-          })
+        console.log(result.user);
+        alert("signup successful")
+        navigate(from, { replace: true });
+
       }
       )
+      .then(() => { })
 
 
   }
@@ -101,12 +104,8 @@ const SignUp = () => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
-              Register
-            </button>
+            <Button type="submit" text={"SignUp"}></Button>
+
           </div>
           <p className='text-md font-bold'>Already Registered? <Link className='text-green-400' to={'/login'}>Login</Link></p>
         </form>
