@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../../../components/Button";
 import HomeBanner from '../HomeBanner/HomeBanner'
+import HomeSlider from "./HomeSlider/HomeSlider";
 
 
 const Home = () => {
@@ -23,10 +24,9 @@ const Home = () => {
                   <button className=' animate__animated animate__fadeInUp animate__delay-1s animate__repeat-2 btn btn-outline  bg-blue-500 hover:bg-blue-700 text-white font-bold  rounded flex justify-center items-center' onClick={() => setIsDarkTheme(!isDarkTheme)}>
                         {isDarkTheme ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
                   </button>
-                  <h2>  This is home</h2>
-                  <Button text="Submit" className="mb-4" />
-                  <Button text="Cancel" className="ml-4" />
+                  
                   <HomeBanner></HomeBanner>
+                  <HomeSlider></HomeSlider>
 
             </div>
       );
