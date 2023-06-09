@@ -1,0 +1,82 @@
+[
+      {
+            "_id":1,
+            "image": "https://1.bp.blogspot.com/-2iYB_f5a4RI/YKOM3X7l6kI/AAAAAAAAQns/1S9HB0IzG7YP8A-RGJYg3VyB25zI9-pngCNcBGAsYHQ/s692/Jr%2BNBA%2BPH-1.JPG",
+            "name": "Basketball Skills Training",
+            "instructor": "Coach John Smith",
+            "availableSeats": 8,
+            "price": 50
+      },
+      {
+            "_id":2,
+            "image": "https://simplifaster.com/wp-content/uploads/2021/11/Youth-Soccer-Training-1024x536.jpg",
+            "name": "Soccer Fundamentals",
+            "instructor": "Coach Sarah Johnson",
+            "availableSeats": 10,
+            "price": 60
+      },
+      {
+            "_id":3,
+            "image": "https://valtertennis.com/wp-content/uploads/2017/09/kids-private-tennis-lesson-tennis-academy.jpg",
+            "name": "Tennis Beginner's Course",
+            "instructor": "Coach David Thompson",
+            "availableSeats": 6,
+            "price": 40
+      },
+      {
+            "_id":4,
+            "image": "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/TGBCMS/kk8ejd9g00qppgpjptqbqw.jpg",
+            "name": "Swimming Lessons",
+            "instructor": "Coach Emily Davis",
+            "availableSeats": 0,
+            "price": 70
+      },
+      {
+            "_id":5,
+            "image": "https://www.kickfit-academy.com/wp-content/uploads/2021/03/kids-karate-class-group.jpg",
+            "name": "Martial Arts - Karate",
+            "instructor": "Sensei Michael Lee",
+            "availableSeats": 15,
+            "price": 80
+      },
+      {
+            "_id":6,
+            "image": "https://static.thehoneycombers.com/wp-content/uploads/sites/6/2022/11/yoga-teacher-training-lead-image.jpg",
+            "name": "Yoga for Flexibility",
+            "instructor": "Instructor Amanda Wilson",
+            "availableSeats": 10,
+            "price": 50
+      },
+      {
+            "_id":7,
+            "image": "https://powellfitnesstraining.com/wp-content/uploads/2019/06/personal-trainer-carousel.jpg",
+            "name": "Fitness - Zumba",
+            "instructor": "Instructor Sophia Martinez",
+            "availableSeats": 20,
+            "price": 55
+      },
+      {
+            "_id":8,
+            "image": "https://roadbikeaction.com/wp-content/uploads/2018/12/cts-base-training-2018-450x300.jpg",
+            "name": "Cycling Group Workout",
+            "instructor": "Instructor Mark Thompson",
+            "availableSeats": 12,
+            "price": 55
+      },
+      {
+            "_id":9,
+            "image": "https://www.merakilane.com/wp-content/uploads/2017/07/core-exercises-for-kids-5.jpg",
+            "name": "Pilates - Core Strengthening",
+            "instructor": "Instructor Jennifer Adams",
+            "availableSeats": 8,
+            "price": 60
+      },
+      {
+            "_id":10,
+            "image": "https://www.wahooparksandrec.com/vimages/shared/vnews/stories/5b4e45b2c0cdf/1_vbsocwara_0098.jpg",
+            "name": "Volleyball Skills Development",
+            "instructor": "Coach Robert Johnson",
+            "availableSeats": 10,
+            "price": 50
+      }
+]

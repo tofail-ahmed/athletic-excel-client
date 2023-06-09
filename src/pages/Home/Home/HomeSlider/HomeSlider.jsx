@@ -15,7 +15,9 @@ const HomeSlider = () => {
 
 
       return (
-            <div className='mx-auto flex justify-center items-center'>
+            <div>
+                  
+                  <div className='mx-auto flex justify-center items-center mb-8'>
                   <div className=' my-8 w-[90vw]  carousel  bg-slate-400' >
                         <div id="slide1" className="carousel-item relative w-full">
                               <img src={img1} className="w-[100vw] h-[60vh]" />
@@ -78,6 +80,7 @@ const HomeSlider = () => {
                               </div>
                         </div>
                   </div>
+            </div>
             </div>
       );
 };
