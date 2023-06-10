@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../../../components/Button";
+
 
 
 const PopularClassDetails = ({ classItem }) => {
       const { _id, name, image, instructor, availableSeats, price, students } = classItem;
       console.log(name);
 
-     
+      const [isHovered, setIsHovered] = useState(false);
+
+      const handleMouseEnter = () => {
+            setIsHovered(true);
+      };
+
+      const handleMouseLeave = () => {
+            setIsHovered(false);
+      };
+
+      const cardStyle = {
+           
+            zIndex: isHovered ? '1' : '0',
+            transition: 'transform 0.5s ease-in-out',
+            transform: isHovered ? 'scale(1.3)' : 'scale(1)',
+      };
       return (
-            <div className="flex  ">
+            <div className="flex  "style={cardStyle}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}>
                   
                   <div className={`card ps-8 pb-8 bg-[#b3b1b1] text-[#411717]"}`}>
                         <img className="card__image w-[300px] h-[200px] rounded-lg" src={image} alt={name} />

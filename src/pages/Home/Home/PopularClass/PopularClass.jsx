@@ -15,7 +15,7 @@ const PopularClass = () => {
             , [])
       console.log(classes);
       return (
-            <div>
+            <div className='my-8'>
                   <div className='mx-auto'>
                   <SectionHeader
                               title={"Poplar Classes"}
@@ -33,7 +33,7 @@ const PopularClass = () => {
 
                         </div>
                   </div>
-                  <div className='mx-auto'>
+                  <div className='mx-auto my-8'>
                         <SectionHeader
                               title={"Poplar Classes"}
                         ></SectionHeader>

@@ -22,7 +22,7 @@ const HomeBanner = () => {
       const images = [image1, image2, image3, image4, image5, image6];
 
       return (
-            <div>
+            <div className='my-8'> 
                   
                   <SectionHeader title={"Top Activities"}></SectionHeader>
                   <div className="image-grid mx-24">
