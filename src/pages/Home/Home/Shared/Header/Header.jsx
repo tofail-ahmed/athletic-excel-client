@@ -47,7 +47,7 @@ const Header = () => {
 
             </>
       return (
-            <div className="bg-transparent">
+            <div className="bg-transparent ">
                   <div className="navbar  bg-transparent">
                         <div className="navbar-start">
                               <div className="dropdown">
@@ -60,7 +60,7 @@ const Header = () => {
                               </div>
                               <a className="btn btn-ghost normal-case text-xl"><span className="text-3xl text-green-500">Athletic</span> <span className="text-green-300">Excel</span></a>
                         </div>
-                        <div className="navbar-center hidden lg:flex">
+                        <div className="navbar-center hidden lg:flex ">
                               <ul className="menu menu-horizontal px-1">
                                     {navbar} 
                               </ul>

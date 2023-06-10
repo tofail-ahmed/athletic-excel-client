@@ -13,24 +13,41 @@ const SignUp = () => {
     handleSubmit,
     formState: { errors },
     watch,
+    reset
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = data => {
 
-    console.log(data);
     createUser(data.email, data.password)
       .then(result => {
-        updateUserProfile(data.name, data.photoURL)
-        console.log(result.user);
-        alert("signup successful")
-        navigate(from, { replace: true });
+            console.log(result.user);
+            updateUserProfile(data.name, data.photoURL)
+                  .then(() => {
+                    const saveUser = { name: data.name, email: data.email }
+                    fetch('http://localhost:5000/users', {
+                      method: "POST",
+                      headers: {
+                        "content-type": "application/json"
+                      },
+                      body: JSON.stringify(saveUser)
+                    })
+                      .then(res => res.json())
+                      .then(data => {
+                        console.log(data);
 
-      }
-      )
-      .then(() => { })
+                                    if (data.insertedId) {
+                                      reset();
+                                      alert("profile updated")
+                                      navigate('/')
+                                        }
+                                  })
 
 
-  }
+                      })
+
+
+          })
+  };
 
 
 
@@ -39,6 +56,16 @@ const SignUp = () => {
       <div className="w-full max-w-md">
         <form className="bg-white shadow-md rounded px-8 py-6" onSubmit={handleSubmit(onSubmit)}>
           <h2 className="text-2xl font-bold mb-6 text-center">Registration</h2>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="Name">
+             Name
+            </label>
+            <input
+              type="text"
+              {...register('name')}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
               Email

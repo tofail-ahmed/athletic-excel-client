@@ -1,82 +1,195 @@
 [
       {
-            "_id":1,
-            "image": "https://1.bp.blogspot.com/-2iYB_f5a4RI/YKOM3X7l6kI/AAAAAAAAQns/1S9HB0IzG7YP8A-RGJYg3VyB25zI9-pngCNcBGAsYHQ/s692/Jr%2BNBA%2BPH-1.JPG",
-            "name": "Basketball Skills Training",
-            "instructor": "Coach John Smith",
-            "availableSeats": 8,
-            "price": 50
+        "image": "https://1.bp.blogspot.com/-2iYB_f5a4RI/YKOM3X7l6kI/AAAAAAAAQns/1S9HB0IzG7YP8A-RGJYg3VyB25zI9-pngCNcBGAsYHQ/s692/Jr%2BNBA%2BPH-1.JPG",
+        "name": "Basketball Skills Training",
+        "instructor": {
+          "name": "Coach John Smith",
+          "image": "https://example.com/instructors/john-smith.jpg",
+          "email": "johnsmith@example.com"
+        },
+        "availableSeats": 8,
+        "price": 50,
+        "students": 26
       },
       {
-            "_id":2,
-            "image": "https://simplifaster.com/wp-content/uploads/2021/11/Youth-Soccer-Training-1024x536.jpg",
-            "name": "Soccer Fundamentals",
-            "instructor": "Coach Sarah Johnson",
-            "availableSeats": 10,
-            "price": 60
+        "image": "https://simplifaster.com/wp-content/uploads/2021/11/Youth-Soccer-Training-1024x536.jpg",
+        "name": "Soccer Fundamentals",
+        "instructor": {
+          "name": "Coach Sarah Johnson",
+          "image": "https://example.com/instructors/sarah-johnson.jpg",
+          "email": "sarahjohnson@example.com"
+        },
+        "availableSeats": 10,
+        "price": 60,
+        "students": 18
       },
       {
-            "_id":3,
-            "image": "https://valtertennis.com/wp-content/uploads/2017/09/kids-private-tennis-lesson-tennis-academy.jpg",
-            "name": "Tennis Beginner's Course",
-            "instructor": "Coach David Thompson",
-            "availableSeats": 6,
-            "price": 40
+        "image": "https://valtertennis.com/wp-content/uploads/2017/09/kids-private-tennis-lesson-tennis-academy.jpg",
+        "name": "Tennis Beginner's Course",
+        "instructor": {
+          "name": "Coach David Thompson",
+          "image": "https://example.com/instructors/david-thompson.jpg",
+          "email": "davidthompson@example.com"
+        },
+        "availableSeats": 6,
+        "price": 40,
+        "students": 24
       },
       {
-            "_id":4,
-            "image": "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/TGBCMS/kk8ejd9g00qppgpjptqbqw.jpg",
-            "name": "Swimming Lessons",
-            "instructor": "Coach Emily Davis",
-            "availableSeats": 0,
-            "price": 70
+        "image": "https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/TGBCMS/kk8ejd9g00qppgpjptqbqw.jpg",
+        "name": "Swimming Lessons",
+        "instructor": {
+          "name": "Coach Emily Davis",
+          "image": "https://example.com/instructors/emily-davis.jpg",
+          "email": "emilydavis@example.com"
+        },
+        "availableSeats": 0,
+        "price": 70,
+        "students": 23
       },
       {
-            "_id":5,
-            "image": "https://www.kickfit-academy.com/wp-content/uploads/2021/03/kids-karate-class-group.jpg",
-            "name": "Martial Arts - Karate",
-            "instructor": "Sensei Michael Lee",
-            "availableSeats": 15,
-            "price": 80
+        "image": "https://www.kickfit-academy.com/wp-content/uploads/2021/03/kids-karate-class-group.jpg",
+        "name": "Martial Arts - Karate",
+        "instructor": {
+          "name": "Sensei Michael Lee",
+          "image": "https://example.com/instructors/michael-lee.jpg",
+          "email": "michaellee@example.com"
+        },
+        "availableSeats": 15,
+        "price": 80,
+        "students": 12
       },
       {
-            "_id":6,
-            "image": "https://static.thehoneycombers.com/wp-content/uploads/sites/6/2022/11/yoga-teacher-training-lead-image.jpg",
-            "name": "Yoga for Flexibility",
-            "instructor": "Instructor Amanda Wilson",
-            "availableSeats": 10,
-            "price": 50
+        "image": "https://static.thehoneycombers.com/wp-content/uploads/sites/6/2022/11/yoga-teacher-training-lead-image.jpg",
+        "name": "Yoga for Flexibility",
+        "instructor": {
+          "name": "Instructor Amanda Wilson",
+          "image": "https://example.com/instructors/amanda-wilson.jpg",
+          "email": "amandawilson@example.com"
+        },
+        "availableSeats": 10,
+        "price": 50,
+        "students": 9
       },
       {
-            "_id":7,
-            "image": "https://powellfitnesstraining.com/wp-content/uploads/2019/06/personal-trainer-carousel.jpg",
-            "name": "Fitness - Zumba",
-            "instructor": "Instructor Sophia Martinez",
-            "availableSeats": 20,
-            "price": 55
+        "image": "https://powellfitnesstraining.com/wp-content/uploads/2019/06/personal-trainer-carousel.jpg",
+        "name": "Fitness - Zumba",
+        "instructor": {
+          "name": "Instructor Sophia Martinez",
+          "image": "https://example.com/instructors/sophia-martinez.jpg",
+          "email": "sophiamartinez@example.com"
+        },
+        "availableSeats": 20,
+        "price": 55,
+        "students": 15
       },
       {
-            "_id":8,
-            "image": "https://roadbikeaction.com/wp-content/uploads/2018/12/cts-base-training-2018-450x300.jpg",
-            "name": "Cycling Group Workout",
-            "instructor": "Instructor Mark Thompson",
-            "availableSeats": 12,
-            "price": 55
+        "image": "https://roadbikeaction.com/wp-content/uploads/2018/12/cts-base-training-2018-450x300.jpg",
+        "name": "Cycling Group Workout",
+        "instructor": {
+          "name": "Instructor Mark Thompson",
+          "image": "https://example.com/instructors/mark-thompson.jpg",
+          "email": "markthompson@example.com"
+        },
+        "availableSeats": 0,
+        "price": 55,
+        "students": 20
       },
       {
-            "_id":9,
-            "image": "https://www.merakilane.com/wp-content/uploads/2017/07/core-exercises-for-kids-5.jpg",
-            "name": "Pilates - Core Strengthening",
-            "instructor": "Instructor Jennifer Adams",
-            "availableSeats": 8,
-            "price": 60
+        "image": "https://www.merakilane.com/wp-content/uploads/2017/07/core-exercises-for-kids-5.jpg",
+        "name": "Pilates - Core Strengthening",
+        "instructor": {
+          "name": "Instructor Jennifer Adams",
+          "image": "https://example.com/instructors/jennifer-adams.jpg",
+          "email": "jenniferadams@example.com"
+        },
+        "availableSeats": 8,
+        "price": 60,
+        "students": 16
       },
       {
-            "_id":10,
-            "image": "https://www.wahooparksandrec.com/vimages/shared/vnews/stories/5b4e45b2c0cdf/1_vbsocwara_0098.jpg",
-            "name": "Volleyball Skills Development",
-            "instructor": "Coach Robert Johnson",
-            "availableSeats": 10,
-            "price": 50
+        "image": "https://www.wahooparksandrec.com/vimages/shared/vnews/stories/5b4e45b2c0cdf/1_vbsocwara_0098.jpg",
+        "name": "Volleyball Skills Development",
+        "instructor": {
+          "name": "Coach Robert Johnson",
+          "image": "https://example.com/instructors/robert-johnson.jpg",
+          "email": "robertjohnson@example.com"
+        },
+        "availableSeats": 10,
+        "price": 50,
+        "students": 18
+      },
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/589b9a28e3df289d7401ff23/1583526708298-T7LCPUIAF1PI91HM2K6K/DSC_5291.jpg",
+        "name": "Gymnastics for Beginners",
+        "instructor": {
+          "name": "Coach Melissa Roberts",
+          "image": "https://example.com/instructors/melissa-roberts.jpg",
+          "email": "melissaroberts@example.com"
+        },
+        "availableSeats": 12,
+        "price": 45,
+        "students": 10
+      },
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/570e701004426215739e72b5/1479148127438-A7SP55PN0RZ1HMCXEHOP/DSC02690.jpg?format=1500w",
+        "name": "Boxing Training",
+        "instructor": {
+          "name": "Coach James Anderson",
+          "image": "https://example.com/instructors/james-anderson.jpg",
+          "email": "jamesanderson@example.com"
+        },
+        "availableSeats": 5,
+        "price": 65,
+        "students": 13
+      },
+      {
+        "image": "https://seriouscricket.co.uk/library/static/media/sc-coaching-500x250.jpg",
+        "name": "Cricket Training",
+        "instructor": {
+          "name": "Instructor Samantha Wilson",
+          "image": "https://example.com/instructors/samantha-wilson.jpg",
+          "email": "samanthawilson@example.com"
+        },
+        "availableSeats": 15,
+        "price": 55,
+        "students": 12
+      },
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/56c4c7e81d07c0eb02d26e58/1587781686190-6JK0MKESJIIMAX6ZSF0W/teaching+golf+to+children.JPG?format=1500w",
+        "name": "Golf Swing Techniques",
+        "instructor": {
+          "name": "Coach Thomas Evans",
+          "image": "https://example.com/instructors/thomas-evans.jpg",
+          "email": "thomasevans@example.com"
+        },
+        "availableSeats": 4,
+        "price": 75,
+        "students": 23
+      },
+      {
+        "image": "https://static.bangkokpost.com/media/content/20130820/533081.jpg",
+        "name": "Badminton Hunter",
+        "instructor": {
+          "name": "Instructor Olivia Davis",
+          "image": "https://example.com/instructors/olivia-davis.jpg",
+          "email": "oliviadavis@example.com"
+        },
+        "availableSeats": 18,
+        "price": 40,
+        "students": 14
+      },
+      {
+        "image": "https://media.istockphoto.com/id/643601868/photo/two-cute-girls-on-taekwondo-training-kicking-and-learning-self-defence.jpg?s=612x612&w=0&k=20&c=GYN6WqQ4ORf8I3Q7wg3WD6KRO0k8NPwbKNcidUj2Ddk=",
+        "name": "Taekwondo - Martial Arts",
+        "instructor": {
+          "name": "Master Alex Kim",
+          "image": "https://example.com/instructors/alex-kim.jpg",
+          "email": "alexkim@example.com"
+        },
+        "availableSeats": 10,
+        "price": 70,
+        "students": 17
       }
-]
+    ]
+    

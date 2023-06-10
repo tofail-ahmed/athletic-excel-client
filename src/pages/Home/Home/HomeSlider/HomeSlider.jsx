@@ -15,7 +15,7 @@ const HomeSlider = () => {
 
 
       return (
-            <div>
+            <div >
                   
                   <div className='mx-auto flex justify-center items-center mb-8'>
                   <div className=' my-8 w-[90vw]  carousel  bg-slate-400' >
