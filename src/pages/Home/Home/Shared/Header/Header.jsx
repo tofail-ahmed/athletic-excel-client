@@ -22,9 +22,9 @@ const Header = () => {
 
       const navbar =
             <> <li><Link to='/'>Home</Link></li>
-                  <li><Link to='/menu'>Menu</Link></li>
-                  <li><Link to='/secret'>Secret</Link></li>
-                  <li><Link to='/order/salad'>Order Food</Link></li>
+                  <li><Link to='/classes'>All Classes</Link></li>
+                  <li><Link to='/instructors'>Instructors</Link></li>
+                  <li><Link to='/addclass'>Add Class</Link></li>
                   {/* <li><Link to={isAdmin ? '/dashboard/adminhome' : '/dashboard/userhome'}>Dashboard</Link></li> */}
                   <li>
                         <Link to='/dashboard/mycart'>

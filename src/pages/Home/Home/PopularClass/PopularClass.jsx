@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PopularClassDetails from './PopularClassDetails';
 import SectionHeader from '../../../../components/SectionHeader/SectionHeader';
 import PopularInstructorDetails from './PopularInstructorDetails';
+import Loader from '../../../../components/Loader/Loader';
 
 
 const PopularClass = () => {
@@ -19,6 +20,7 @@ const PopularClass = () => {
                   <SectionHeader
                               title={"Poplar Classes"}
                   ></SectionHeader>
+                  <Loader></Loader>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-[90vw] mx-auto " >
                         {
                               classes.map(classItem =>
@@ -35,6 +37,7 @@ const PopularClass = () => {
                         <SectionHeader
                               title={"Poplar Classes"}
                         ></SectionHeader>
+                        <Loader></Loader>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-[90vw] mx-auto " >
                               {
                                     classes.map(classItem =>
