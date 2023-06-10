@@ -1,7 +1,7 @@
-import { useState } from "react";
-import Button from "../../../components/Button";
+
 import HomeBanner from '../HomeBanner/HomeBanner'
 import HomeSlider from "./HomeSlider/HomeSlider";
+import PopularClass from "./PopularClass/PopularClass";
 
 
 const Home = () => {
@@ -11,6 +11,7 @@ const Home = () => {
                  
                   
                   <HomeSlider></HomeSlider>
+                  <PopularClass></PopularClass>
                   <HomeBanner></HomeBanner>
 
             </div>
