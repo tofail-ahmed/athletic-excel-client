@@ -57,7 +57,7 @@ const AddClass = () => {
       };
 
 
-
+//Note: Instructor's email and name field not shown, because user.emai and user.displayName are taken as emailand name--------------
 
 
 

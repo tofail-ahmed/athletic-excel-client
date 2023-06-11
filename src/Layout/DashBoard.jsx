@@ -5,7 +5,7 @@ import SectionHeader from '../components/SectionHeader/SectionHeader';
 
 const DashBoard = () => {
       const isAdmin = false;
-      const isInstructor = true;
+      const isInstructor =true ;
       return (
             <div>
                   <div className="drawer drawer-mobile">

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import { AuthContext } from '../../Providers/AuthProvider';
+import Button from '../../components/Button';
 
 const InstructorClasses = () => {
       const { user } = useContext(AuthContext);
@@ -17,9 +18,9 @@ const InstructorClasses = () => {
       }, [user?.email])
       console.log(classes);
       return (
-            <div>
+            <div className=' '>
                   <SectionHeader title={"Class Of Instructor"}></SectionHeader>
-                  <table className="min-w-[1200px] mx-auto bg-white border border-gray-300">
+                  <table className="min-w-[1200px] mx-auto bg-slate-300 border-gray-300 mb-16">
                         <thead>
                               <tr>
                                     <th className="py-4 px-2 bg-gray-100 border-b"></th>
@@ -29,6 +30,7 @@ const InstructorClasses = () => {
                                     <th className="py-4 px-2 bg-gray-100 border-b">Available Seats</th>
                                     <th className="py-4 px-2 bg-gray-100 border-b">Price</th>
                                     <th className="py-4 px-2 bg-gray-100 border-b">Status</th>
+                                    <th className="py-4 px-2 bg-gray-100 border-b">Enrolled</th>
                                     <th className="py-4 px-2 bg-gray-100 border-b">Action</th>
 
 
@@ -40,18 +42,19 @@ const InstructorClasses = () => {
                                           <td>
                                                 <img className='w-[100px] h-[100px] m-2 rounded-e-full' src={classItem.image} alt="" />
                                           </td>
-                                          <td className="py-4 px-2 border-b">{classItem.name}</td>
-                                          <td className="py-4 px-2 border-b">{classItem.instructor.name}</td>
-                                          <td className="py-4 px-2 border-b">{classItem.instructor.email}</td>
-                                          <td className="py-4 px-2 border-b">{classItem.availableSeats || classItem.seatsAvailable}</td>
-                                          <td className="py-4 px-2 border-b">{classItem.price}</td>
-                                          <td className="py-4 px-2 border-b">{classItem.status === "approved" ? "Approved" : classItem.status === "denied" ? "Denied" : "pending"}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem.name}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem.instructor.name}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem.instructor.email}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem.availableSeats || classItem.seatsAvailable}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem.price}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem.status === "approved" ? "Approved" : classItem.status === "denied" ? "Denied" : "pending"}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem.students ? classItem.students : 0}</td>
 
 
                                           <td>
 
 
-
+                                                <Button text={"Update"}></Button>
                                           </td>
 
                                     </tr>
