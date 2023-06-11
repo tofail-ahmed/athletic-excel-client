@@ -13,7 +13,8 @@ import AddClass from "../pages/AddClass/AddClass";
 import DashBoard from "../Layout/DashBoard";
 import AllUser from "../pages/DashBoard/AllUser";
 import AdminHome from "../pages/DashBoard/AdminHome";
-import ManageBooking from "../pages/DashBoard/ManageBooking";
+import ManageBooking from "../pages/DashBoard/ManageClasses";
+import ManageClasses from "../pages/DashBoard/ManageClasses";
 
 export const router = createBrowserRouter([
       {
@@ -63,7 +64,7 @@ export const router = createBrowserRouter([
                   },
                   {
                         path:'manageclass',
-                        element:<ManageBooking></ManageBooking>
+                        element:<ManageClasses></ManageClasses>
                   }
             ]
 

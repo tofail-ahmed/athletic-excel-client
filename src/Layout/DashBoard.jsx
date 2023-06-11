@@ -29,12 +29,9 @@ const DashBoard = () => {
                                                       </NavLink></li>
                                                       <li><NavLink to="/dashboard/manageclass">
                                                             <FaIntercom></FaIntercom>
-                                                            Manage Items
+                                                            Manage Classes
                                                       </NavLink></li>
-                                                      <li><NavLink to='/dashboard/mycart'>
-                                                            <FaBook></FaBook> Manage Bookings
 
-                                                      </NavLink></li>
                                                       <li><NavLink to='/dashboard/alluser'>
                                                             <FaUser></FaUser> AllUsers
 
@@ -44,6 +41,10 @@ const DashBoard = () => {
                                                 :
                                                 <>
                                                       <li><NavLink to="/dashboard">  <FaHome></FaHome>UserHome
+                                                      </NavLink></li>
+                                                      <li><NavLink to='/dashboard/mycart'>
+                                                            <FaBook></FaBook> My Classes
+
                                                       </NavLink></li>
                                                 </>
                                     }
