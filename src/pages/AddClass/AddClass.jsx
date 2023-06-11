@@ -12,7 +12,7 @@ const AddClass = () => {
 
       const [className, setClassName] = useState('');
       const [image, setImage] = useState('');
-      const [seatsAvailable, setSeatsAvailable] = useState(0);
+      const [availableSeats, setAailableSeats] = useState(0);
       const [price, setPrice] = useState(0);
 
       const [formError, setFormError] = useState(false);
@@ -22,7 +22,7 @@ const AddClass = () => {
             const classData = {
                   name: className,
                   image,
-                  seatsAvailable,
+                  availableSeats,
                   price,
                   instructor: {
                         name: user.displayName,
@@ -31,7 +31,7 @@ const AddClass = () => {
                   },
             };
            
-            if (!className || !image || !seatsAvailable || !price) {
+            if (!className || !image || !availableSeats || !price) {
                   setFormError(true);
                   return;
             }
@@ -50,7 +50,7 @@ const AddClass = () => {
             // Reset form fields
             setClassName('');
             setImage('');
-            setSeatsAvailable(0);
+            setAailableSeats(0);
             setPrice(0);
 
 
@@ -99,14 +99,14 @@ const AddClass = () => {
                               />
                         </div>
                         <div className="mb-4">
-                              <label htmlFor="seatsAvailable" className="text-lg">
-                                    Seats Available:
+                              <label htmlFor="seatAvailable" className="text-lg">
+                                    Seat Available:
                               </label>
                               <input
                                     type="number"
-                                    id="seatsAvailable"
-                                    value={seatsAvailable}
-                                    onChange={(e) => setSeatsAvailable(parseInt(e.target.value))}
+                                    id="availableSeats"
+                                    value={availableSeats}
+                                    onChange={(e) => setAailableSeats(parseInt(e.target.value))}
                                     className="w-full border-gray-300 rounded-md p-2"
                               />
                         </div>
