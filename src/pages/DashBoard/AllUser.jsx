@@ -48,7 +48,7 @@ const AllUser = () => {
       return (
             <div>
                   <SectionHeader title={"All User"}></SectionHeader>
-                  <table className="min-w-[1000px] mx-auto bg-white border border-gray-300">
+                  <table className="min-w-[1000px] mx-auto  border border-gray-300 mb-12 bg-slate-300 ">
                         <thead>
                               <tr>
                                     <th className="py-4 px-4 bg-gray-100 border-b">Name</th>

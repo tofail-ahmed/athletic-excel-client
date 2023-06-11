@@ -4,7 +4,8 @@ import { FaBook, FaCartPlus, FaHome, FaIntercom, FaMoneyCheckAlt, FaUser, FaUten
 import SectionHeader from '../components/SectionHeader/SectionHeader';
 
 const DashBoard = () => {
-      const isAdmin = true;
+      const isAdmin = false;
+      const isInstructor = true;
       return (
             <div>
                   <div className="drawer drawer-mobile">
@@ -25,7 +26,7 @@ const DashBoard = () => {
                                                       <li><NavLink to="/dashboard/adminhome">  <FaHome></FaHome>Admin Home
                                                       </NavLink></li>
                                                       <li><NavLink to="/dashboard/addclass">
-                                                            <FaUtensils></FaUtensils> Add Items
+                                                            <FaUtensils></FaUtensils> Add Class
                                                       </NavLink></li>
                                                       <li><NavLink to="/dashboard/manageclass">
                                                             <FaIntercom></FaIntercom>
@@ -37,10 +38,23 @@ const DashBoard = () => {
 
                                                       </NavLink></li>
 
+                                                </> :
+                                                isInstructor ?
+                                                      <>
+                                                            <li><NavLink to="/dashboard/instructorhome">  <FaHome></FaHome>Instructor Home
+                                                            </NavLink></li>
+                                                            <li><NavLink to="/dashboard/addclass">
+                                                                  <FaUtensils></FaUtensils> Add Class
+                                                            </NavLink></li>
+                                                            <li><NavLink to='/dashboard/classbyinstructor'>
+                                                                  <FaBook></FaBook> Instructor Classes
+
+                                                            </NavLink></li>
+
                                                 </>
                                                 :
                                                 <>
-                                                      <li><NavLink to="/dashboard">  <FaHome></FaHome>UserHome
+                                                            <li><NavLink to="/dashboard">  <FaHome></FaHome>UserHome
                                                       </NavLink></li>
                                                       <li><NavLink to='/dashboard/mycart'>
                                                             <FaBook></FaBook> My Classes
