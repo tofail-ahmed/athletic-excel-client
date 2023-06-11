@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Button from '../../components/Button';
+import SectionHeader from '../../components/SectionHeader/SectionHeader';
 // import { useContext } from 'react';
 
 
@@ -67,6 +68,7 @@ const AddClass = () => {
    
       return (
             <div className='mx-[20vw]'>
+                  <SectionHeader title={"Add Class"}></SectionHeader>
 
                   <form onSubmit={handleSubmit} className="bg-gray-100 p-4 rounded-lg shadow-md">
                         <h2 className="text-2xl mb-4">Add Class</h2>

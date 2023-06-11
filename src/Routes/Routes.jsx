@@ -10,6 +10,10 @@ import NotFound from "../components/NotFound/NotFound";
 import Classes from "../pages/Classes/Classes";
 import Instructors from "../pages/Instructors/Instructors";
 import AddClass from "../pages/AddClass/AddClass";
+import DashBoard from "../Layout/DashBoard";
+import AllUser from "../pages/DashBoard/AllUser";
+import AdminHome from "../pages/DashBoard/AdminHome";
+import ManageBooking from "../pages/DashBoard/ManageBooking";
 
 export const router = createBrowserRouter([
       {
@@ -36,13 +40,33 @@ export const router = createBrowserRouter([
                         path:"/instructors",
                         element:<Instructors></Instructors>
                   },
-                  {
-                        path:'/addclass',
-                        element:<AddClass></AddClass>
-                  }
+
 
             ],
             errorElement: <NotFound></NotFound>
       },
+      {
+            path: "dashboard",
+            element: <DashBoard></DashBoard>,
+            children: [
+                  {
+                        path:'addclass',
+                        element:<AddClass></AddClass>
+                  },
+                  {
+                        path:"alluser",
+                        element:<AllUser></AllUser>
+                  },
+                  {
+                        path:'adminhome',
+                        element:<AdminHome></AdminHome>
+                  },
+                  {
+                        path:'manageclass',
+                        element:<ManageBooking></ManageBooking>
+                  }
+            ]
+
+      }
     
 ]);

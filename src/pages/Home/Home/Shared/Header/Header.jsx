@@ -25,6 +25,7 @@ const Header = () => {
                   <li><Link to='/classes'>All Classes</Link></li>
                   <li><Link to='/instructors'>Instructors</Link></li>
                   <li><Link to='/addclass'>Add Class</Link></li>
+                  <li><Link to='/dashboard'>DashBoard</Link></li>
                   {/* <li><Link to={isAdmin ? '/dashboard/adminhome' : '/dashboard/userhome'}>Dashboard</Link></li> */}
                   <li>
                         <Link to='/dashboard/mycart'>

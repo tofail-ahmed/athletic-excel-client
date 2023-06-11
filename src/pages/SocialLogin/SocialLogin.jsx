@@ -16,6 +16,8 @@ const SocialLogin = () => {
                   .then(result => {
                         const loggedUser = result.user;
                         console.log(loggedUser);
+                        alert("login successfull")
+                        navigate(from, { replace: true });
 
                         const saveUser = { name: loggedUser.displayName, email: loggedUser.email }
                         fetch('http://localhost:5000/users', {
@@ -27,11 +29,7 @@ const SocialLogin = () => {
                         })
                               .then(res => res.json())
                               .then(() => {
-                                    {
 
-
-                                          navigate(from, { replace: true });
-                                    }
                               })
 
 
@@ -42,11 +40,11 @@ const SocialLogin = () => {
             <div className='text-center'>
                   <div className='divider'></div>
                   <p>Login with <span className='text-orange-500 font-bold pb-4'>Google</span></p>
-                  <button onClick={handleGoogleSignIn} className='btn btn-circle btn-outline mt-4'>
+                  {/* <button onClick={handleGoogleSignIn} className='btn btn-circle btn-outline mt-4'>
                         <FaGoogle></FaGoogle>
-                  </button>
-                  <div onClick={handleGoogleSignIn}>
-                  <Button  text={"Google"}><FaGoogle></FaGoogle></Button>
+                  </button> */}
+                  <div>
+                        <Button onClick={handleGoogleSignIn} text={"Google"}><FaGoogle></FaGoogle></Button>
                   </div>
             </div>
       );

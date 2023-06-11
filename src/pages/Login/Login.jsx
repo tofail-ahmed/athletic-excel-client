@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Button from '../../components/Button'
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
       const navigate = useNavigate();
@@ -57,7 +58,7 @@ const Login = () => {
                                     
                               </div>
                               <p className='text-md font-bold'>Already Registered? <Link className='text-green-400' to={'/signup'}>SignUp</Link></p>
-
+<SocialLogin></SocialLogin>
                         </form>
                   </div>
             </div>
