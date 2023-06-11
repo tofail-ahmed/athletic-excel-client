@@ -67,7 +67,7 @@ const AllUser = () => {
                                                 <Button text={"Make Admin"} onClick={() => handleMakeAdmin(user)} ></Button>
                                           }</td>
                                           <td >{user.role === 'instructor' ? 'instructor' :
-                                                // <button onClick={() => handleMakeAdmin(user)} ><FaUserShield></FaUserShield></button>
+                                               
                                                 <Button text={"Make Instructor"} onClick={() => handleMakeInstructor(user)} ></Button>
                                           }</td>
 

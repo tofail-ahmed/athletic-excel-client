@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import useAxiosSecure from '../../Hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import Button from '../../components/Button';
 
 const ManageClasses = () => {
+
+      const [isVisible, setIsVisible] = useState(true);
+
+
       const [axiosSecure] = useAxiosSecure();
       const { data: classes = [], refetch } = useQuery(['classes'], async () => {
             const res = await axiosSecure.get('/classes')
@@ -20,7 +24,24 @@ const ManageClasses = () => {
                         console.log(data)
                         if (data.modifiedCount) {
                               refetch();
-                              alert(`${classItem.name} is an Admin Now!`)
+                              alert(`${classItem.name} is Approved!`)
+
+
+                        }
+                  })
+      }
+      const handleDeny = classItem => {
+            fetch(`http://localhost:5000/classes/deny/${classItem._id}`, {
+                  method: 'PATCH'
+            })
+                  .then(res => res.json())
+                  .then(data => {
+                        console.log(data)
+                        if (data.modifiedCount) {
+                              refetch();
+                              alert(`${classItem.name} is Denied!`)
+
+
                         }
                   })
       }
@@ -40,6 +61,7 @@ const ManageClasses = () => {
                                     <th className="py-4 px-2 bg-gray-100 border-b">Available Seats</th>
                                     <th className="py-4 px-2 bg-gray-100 border-b">Price</th>
                                     <th className="py-4 px-2 bg-gray-100 border-b">Status</th>
+                                    <th className="py-4 px-2 bg-gray-100 border-b">Action</th>
 
 
                               </tr>
@@ -55,15 +77,26 @@ const ManageClasses = () => {
                                           <td className="py-4 px-2 border-b">{classItem.instructor.email}</td>
                                           <td className="py-4 px-2 border-b">{classItem.availableSeats}</td>
                                           <td className="py-4 px-2 border-b">{classItem.price}</td>
+                                          <td className="py-4 px-2 border-b">{classItem.status === "approved" ? "Approved" : classItem.status === "denied" ? "Denied" : "pending"}</td>
 
-                                          <td >{classItem.status === 'admin' ? 'admin' :
+                                          {/* <td >{classItem.status === 'pending' ? 'approved' :
                                                 // <button onClick={() => handleMakeAdmin(user)} ><FaUserShield></FaUserShield></button>
-                                                <Button text={"Approve"} onClick={() => handleApprove(classItem)} ></Button>
+                                                // <Button text={"Approve"} onClick={() => handleApprove(classItem)} ></Button>
                                           }
                                                 {classItem.status === 'instructor' ? 'instructor' :
                                                       // <button onClick={() => handleMakeAdmin(user)} ><FaUserShield></FaUserShield></button>
                                                       <Button text={"Deny"} onClick={() => handleDeny(classItem)} ></Button>
-                                                }</td>
+                                                }</td> */}
+                                          <td>
+                                                {classItem.status === "approved" ? "Approved" :classItem.status === "denied" ? "Denied":
+                                                      <><Button text={"Approve"} onClick={() => handleApprove(classItem)}></Button>
+                                                      <Button text={"Deny"} onClick={() => handleDeny(classItem)}></Button>
+                                                      </>
+                                                }
+                                                {/* {classItem.status === "denied" ? "Denied" :
+                                                      <Button text={"Deny"} onClick={() => handleDeny(classItem)}></Button>} */}
+
+                                          </td>
 
                                     </tr>
                               ))}
