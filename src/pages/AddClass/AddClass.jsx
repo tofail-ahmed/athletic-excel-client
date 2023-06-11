@@ -14,9 +14,7 @@ const AddClass = () => {
       const [image, setImage] = useState('');
       const [seatsAvailable, setSeatsAvailable] = useState(0);
       const [price, setPrice] = useState(0);
-      const [instructorName, setInstructorName] = useState('');
-      const [instructorImage, setInstructorImage] = useState('');
-      const [instructorEmail, setInstructorEmail] = useState('');
+
       const [formError, setFormError] = useState(false);
       const handleSubmit = (e) => {
             e.preventDefault();
@@ -33,7 +31,7 @@ const AddClass = () => {
                   },
             };
            
-            if (!className || !image || !seatsAvailable || !price || !instructorName || !instructorImage || !instructorEmail) {
+            if (!className || !image || !seatsAvailable || !price) {
                   setFormError(true);
                   return;
             }
@@ -54,9 +52,8 @@ const AddClass = () => {
             setImage('');
             setSeatsAvailable(0);
             setPrice(0);
-            setInstructorName('');
-            setInstructorImage('');
-            setInstructorEmail('');
+
+
       };
 
 
