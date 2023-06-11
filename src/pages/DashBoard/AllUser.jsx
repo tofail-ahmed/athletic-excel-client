@@ -55,6 +55,7 @@ const AllUser = () => {
                                     <th className="py-4 px-4 bg-gray-100 border-b">Email</th>
                                     <th className="py-4 px-4 bg-gray-100 border-b">Role</th>
                                     <th className="py-4 px-4 bg-gray-100 border-b">Additional Section</th>
+                                    <th className="py-4 px-4 bg-gray-100 border-b">Additional Section</th>
                               </tr>
                         </thead>
                         <tbody>
@@ -62,11 +63,12 @@ const AllUser = () => {
                                     <tr key={user._id} className="hover:bg-gray-100">
                                           <td className="py-4 px-4 border-b">{user.name}</td>
                                           <td className="py-4 px-4 border-b">{user.email}</td>
-                                          <td >{user.role === 'admin' ? 'admin' :
+                                          <td className="py-4 px-4 border-b">{user.role==='admin'?"Admin":user.role==='instructor'?"Instructor":"Student"}</td>
+                                          <td >{user.role === 'admin' ? 'Admin' :
                                                 // <button onClick={() => handleMakeAdmin(user)} ><FaUserShield></FaUserShield></button>
                                                 <Button text={"Make Admin"} onClick={() => handleMakeAdmin(user)} ></Button>
                                           }</td>
-                                          <td >{user.role === 'instructor' ? 'instructor' :
+                                          <td >{user.role === 'instructor' ? 'Instructor' :
                                                
                                                 <Button text={"Make Instructor"} onClick={() => handleMakeInstructor(user)} ></Button>
                                           }</td>
