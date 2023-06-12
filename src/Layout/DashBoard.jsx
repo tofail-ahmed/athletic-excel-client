@@ -2,10 +2,12 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { FaBook, FaCartPlus, FaHome, FaIntercom, FaMoneyCheckAlt, FaUser, FaUtensils } from "react-icons/fa";
 import SectionHeader from '../components/SectionHeader/SectionHeader';
+import useAdmin from '../Hooks/useAdmin';
 
 const DashBoard = () => {
-      const isAdmin = false;
-      const isInstructor =true ;
+      // const isAdmin = false;
+      const isInstructor =false ;
+      const [isAdmin]=useAdmin();
       return (
             <div>
                   <div className="drawer drawer-mobile">
@@ -66,8 +68,8 @@ const DashBoard = () => {
                                     <div className="divider"></div>
 
                                     <li><NavLink to='/'>Home</NavLink></li>
-                                    <li><NavLink to='/menu'>Menu</NavLink></li>
-                                    <li><NavLink to='/secret'>Secret</NavLink></li>
+                                    <li><NavLink to='/classes'>Classes</NavLink></li>
+                                    <li><NavLink to='/instructors'>Instructors</NavLink></li>
                                     <li><NavLink to='/order/salad'>Order Food</NavLink></li>
                               </ul>
                         </div>
