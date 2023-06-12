@@ -13,25 +13,10 @@ const MyClasses = () => {
       const totalPrice = cart.reduce((sum, item) => item.price + sum, 0);
       console.log(totalPrice);
 
-      // useEffect(() => {
-      //       fetch(`http://localhost:5000/carts/${user?.email}`)
-      //             .then(res => res.json())
-      //             .then(data => {
-      //                   console.log(data);
-      //             })
-      // }, [user?.email])
+      
       const handleDelete = classItem => {
             console.log(classItem);
-            // fetch(`http://localhost:5000/carts/${classItem._id}`, {
-            //       method: 'DELETE'
-            // })
-            //       .then(res => {
-            //             console.log(res);
-            //       })
-            //       .catch(error => {
-            //             console.log(error);
-
-            //       })
+           
 
             Swal.fire({
                   title: 'Are you sure?',
