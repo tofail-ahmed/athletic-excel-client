@@ -3,11 +3,13 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { FaBook, FaCartPlus, FaHome, FaIntercom, FaMoneyCheckAlt, FaUser, FaUtensils } from "react-icons/fa";
 import SectionHeader from '../components/SectionHeader/SectionHeader';
 import useAdmin from '../Hooks/useAdmin';
+import useInstructor from '../Hooks/useInstructor';
 
 const DashBoard = () => {
       // const isAdmin = false;
-      const isInstructor =false ;
+      // const isInstructor =false ;
       const [isAdmin]=useAdmin();
+      const [isInstructor]=useInstructor();
       return (
             <div>
                   <div className="drawer drawer-mobile">
