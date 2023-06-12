@@ -58,10 +58,14 @@ const DashBoard = () => {
                                                 </>
                                                 :
                                                 <>
-                                                            <li><NavLink to="/dashboard">  <FaHome></FaHome>UserHome
+                                                            <li><NavLink to="/dashboard/userhome">  <FaHome></FaHome>UserHome
                                                       </NavLink></li>
-                                                      <li><NavLink to='/dashboard/mycart'>
+                                                            <li><NavLink to='/dashboard/myclasses'>
                                                             <FaBook></FaBook> My Classes
+
+                                                      </NavLink></li>
+                                                            <li><NavLink to='/dashboard/enrolledclasses'>
+                                                            <FaBook></FaBook> My Enrolled Classes
 
                                                       </NavLink></li>
                                                 </>

@@ -17,6 +17,9 @@ import ManageBooking from "../pages/DashBoard/ManageClasses";
 import ManageClasses from "../pages/DashBoard/ManageClasses";
 import InstructorHome from "../pages/DashBoard/InstructorHome";
 import InstructorClasses from "../pages/DashBoard/InstructorClasses";
+import MyClasses from "../pages/DashBoard/MyClasses";
+import UserHome from "../pages/DashBoard/UserHome";
+import EnrolledClasses from "../pages/DashBoard/EnrolledClasses";
 
 export const router = createBrowserRouter([
       {
@@ -75,6 +78,18 @@ export const router = createBrowserRouter([
                   {
                         path:'classbyinstructor',
                         element:<InstructorClasses></InstructorClasses>
+                  },
+                  {
+                        path: 'myclasses',
+                        element: <MyClasses></MyClasses>
+                  },
+                  {
+                        path: "userhome",
+                        element: <UserHome></UserHome>     
+                  },
+                  {
+                        path:'enrolledclasses',
+                        element:<EnrolledClasses></EnrolledClasses>
                   }
             ]
 

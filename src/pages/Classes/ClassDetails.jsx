@@ -17,7 +17,7 @@ const ClassDetails = ({ classItem }) => {
             console.log(classItem);
             if (user && user.email) {
                   const cartItem = {
-                        menuItemId: _id, name, price,image, email: user.email
+                        classId: _id, name, price, image, email: user.email, instructor: instructor
                   }
                   fetch("http://localhost:5000/carts", {
                         method: "POST",
