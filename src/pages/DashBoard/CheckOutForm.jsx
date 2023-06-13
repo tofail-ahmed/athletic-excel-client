@@ -16,6 +16,8 @@ const CheckoutForm = ({ cart, price }) => {
       const [clientSecret, setClientSecret] = useState('');
       const [processing, setProcessing] = useState(false);
       const [transactionId, setTransactionId] = useState('');
+      const [paymentComplete, setPaymentComplete] = useState(false);
+      console.log(cart);
 
       useEffect(() => {
             if (price > 0) {
@@ -77,6 +79,7 @@ const CheckoutForm = ({ cart, price }) => {
             setProcessing(false)
             if (paymentIntent.status === 'succeeded') {
                   setTransactionId(paymentIntent.id);
+                  setPaymentComplete(true);
                   // save payment information to the server
                   const payment = {
                         email: user?.email,
@@ -126,7 +129,8 @@ const CheckoutForm = ({ cart, price }) => {
                         </button>
                   </form>
                   {cardError && <p className="text-red-600 text-2xl font-bold ml-8">{cardError}</p>}
-                  {transactionId && <p className="text-green-500 text-center text-xl">Payment complete with transactionId: <span className="text-2xl font-bold">{transactionId}</span></p>}
+                  {paymentComplete && <p className="text-green-500 text-center text-xl">Payment complete with transactionId: <span className="text-2xl font-bold">{transactionId}</span></p>}
+                  {/* {transactionId && <p className="text-green-500 text-center text-xl">Payment complete with transactionId: <span className="text-2xl font-bold">{transactionId}</span></p>} */}
             </>
       );
 };

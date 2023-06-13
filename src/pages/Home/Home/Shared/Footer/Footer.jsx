@@ -1,8 +1,9 @@
-
+import logo from '../../../../../assets/home_banner/logo-removebg-preview.png'
+import { FaFacebookSquare, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const footerStyle = {
-    backgroundColor: '#333',
+    backgroundColor: 'black',
     color: '#fff',
     padding: '20px',
     textAlign: 'center',
@@ -23,17 +24,20 @@ const Footer = () => {
     fontSize: '24px',
     fontWeight: 'bold',
     marginBottom: '10px',
+    width: "300px"
   };
 
   return (
-    <footer style={footerStyle}>
-      <h1 style={logoStyle}>Your Website</h1>
-      <nav>
-        <a href="#" style={linkStyle}>Home</a>
-        <a href="#" style={linkStyle}>About</a>
-        <a href="#" style={linkStyle}>Contact</a>
-      </nav>
+    <footer className='md:flex justify-around items-center' style={footerStyle}>
+
+      <img className='text-white ' style={logoStyle} src={logo} alt="" />
+      <nav className='font-bold text-slate-300'>
+        <div> Phone: +1 (555) 123-4567</div>
+        <div>  Email: info@example.com</div>
+        <div>  Address: 123 Main Street, City, State, Country</div>
+        <div style={linkStyle} className='flex justify-center my-4 text-2xl gap-4'> <FaFacebookSquare></FaFacebookSquare> <FaWhatsapp></FaWhatsapp><FaLinkedin></FaLinkedin><FaInstagram></FaInstagram></div>
       <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
+      </nav>
     </footer>
   );
 };
