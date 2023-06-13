@@ -85,7 +85,7 @@ const CheckoutForm = ({ cart, price }) => {
                         date: new Date(),
                         quantity: cart.length,
                         cartItems: cart.map(item => item._id),
-                        classItem: cart.map(item => item.classItem),
+                        
                         // status: 'service pending',
                         itemNames: cart.map(item => item.name)
                   }
@@ -125,8 +125,8 @@ const CheckoutForm = ({ cart, price }) => {
                               Pay
                         </button>
                   </form>
-                  {cardError && <p className="text-red-600 ml-8">{cardError}</p>}
-                  {transactionId && <p className="text-green-500">Transaction complete with transactionId: {transactionId}</p>}
+                  {cardError && <p className="text-red-600 text-2xl font-bold ml-8">{cardError}</p>}
+                  {transactionId && <p className="text-green-500 text-center text-xl">Payment complete with transactionId: <span className="text-2xl font-bold">{transactionId}</span></p>}
             </>
       );
 };
