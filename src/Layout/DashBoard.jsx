@@ -76,7 +76,7 @@ const DashBoard = () => {
                                     <li><NavLink to='/'>Home</NavLink></li>
                                     <li><NavLink to='/classes'>Classes</NavLink></li>
                                     <li><NavLink to='/instructors'>Instructors</NavLink></li>
-                                    <li><NavLink to='/order/salad'>Order Food</NavLink></li>
+                                    <li><NavLink to='/blog'>Blog</NavLink></li>
                               </ul>
                         </div>
                   </div>

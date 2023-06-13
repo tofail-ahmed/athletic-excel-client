@@ -20,6 +20,8 @@ import InstructorClasses from "../pages/DashBoard/InstructorClasses";
 import MyClasses from "../pages/DashBoard/MyClasses";
 import UserHome from "../pages/DashBoard/UserHome";
 import EnrolledClasses from "../pages/DashBoard/EnrolledClasses";
+import Blog from "../pages/Blog/Blog";
+import Payment from "../pages/DashBoard/Payment";
 
 export const router = createBrowserRouter([
       {
@@ -46,6 +48,10 @@ export const router = createBrowserRouter([
                         path:"/instructors",
                         element:<Instructors></Instructors>
                   },
+                  {
+                        path: '/blog',
+                        element: <Blog></Blog>
+                  }
 
 
             ],
@@ -90,6 +96,10 @@ export const router = createBrowserRouter([
                   {
                         path:'enrolledclasses',
                         element:<EnrolledClasses></EnrolledClasses>
+                  },
+                  {
+                        path: 'payment',
+                        element: <Payment></Payment>
                   }
             ]
 

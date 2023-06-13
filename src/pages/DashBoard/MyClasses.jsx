@@ -5,6 +5,7 @@ import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import Button from '../../components/Button';
 import Swal from 'sweetalert2';
 import Loader from '../../components/Loader/Loader';
+import { Link } from 'react-router-dom';
 
 const MyClasses = () => {
       const { user } = useContext(AuthContext);
@@ -49,6 +50,13 @@ const MyClasses = () => {
             <div>
                   <SectionHeader title={"Selected Classes"}></SectionHeader>
                   <Loader></Loader>
+                 <div className='flex justify-between mx-12 mb-4'>
+                  <div>
+                  <p className='text-2xl font-bold text-red-400'>Total Payable Amount:{totalPrice}</p>
+                  <p className='text-2xl font-bold text-red-400'>Total Selected Class:{cart.length}</p>
+                  </div>
+                 <Link to='/dashboard/payment'> <Button text={"PAY"}></Button></Link>
+                 </div>
                   <table className="min-w-[1200px] mx-auto bg-slate-300 border-gray-300 mb-16">
                         <thead>
                               <tr>

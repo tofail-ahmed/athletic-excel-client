@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDbqdGAlYcjihQDiviSMRB2MSRi90iaVZc",
-  authDomain: "athletic-excel.firebaseapp.com",
-  projectId: "athletic-excel",
-  storageBucket: "athletic-excel.appspot.com",
-  messagingSenderId: "264326068681",
-  appId: "1:264326068681:web:9951b895c04e3ab4ba1018"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

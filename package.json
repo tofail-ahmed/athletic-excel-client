@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^2.1.0",
+    "@stripe/stripe-js": "^1.54.0",
     "@tanstack/react-query": "^4.29.12",
     "aos": "^2.3.4",
     "axios": "^1.4.0",
@@ -25,6 +27,7 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "sort-by": "^1.2.0",
+    "stripe": "^12.9.0",
     "sweetalert2": "^11.7.12"
   },
   "devDependencies": {
