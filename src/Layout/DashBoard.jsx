@@ -68,6 +68,10 @@ const DashBoard = () => {
                                                             <FaBook></FaBook> My Enrolled Classes
 
                                                       </NavLink></li>
+                                                            <li><NavLink to='/dashboard/paymenthistory'>
+                                                            <FaBook></FaBook> Payment History
+
+                                                      </NavLink></li>
                                                 </>
                                     }
 

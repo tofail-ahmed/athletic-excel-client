@@ -9,10 +9,11 @@ const EnrolledClasses = () => {
             fetch(`http://localhost:5000/payment/${user?.email}`)
                   .then(res => res.json())
                   .then(data => {
+                        console.log("data", data);
                         setClasses(data.map(classItem => (classItem.itemNames)));
                   })
       }, [user?.email])
-      console.log(classes);
+      console.log('classes', classes);
       return (
             <div>
                   <SectionHeader title={"Enrolled Classes"}></SectionHeader>
@@ -43,11 +44,16 @@ const EnrolledClasses = () => {
                        <div>
                        <p className='text-2xl font-bold '>Classes <span className='text-blue-600'>{user?.displayName}</span> Enrolled</p>
                         {classes.map((subArray, subIndex) => (
-                              <ul  key={subIndex}>
+                              <div key={subIndex}>
                                     {subArray.map((item, index) => (
-                                          <li className='text-xl  font-bold text-purple-800 ' key={index}> {item}</li>
+
+                                          <div  key={index}>
+                                                <ol>
+                                                <li className='text-xl  font-bold text-purple-800 ' > {item}</li>
+                                          </ol>
+                                          </div>
                                     ))}
-                              </ul>
+                              </div>
                         ))}
                        </div>
                   </div> */}
@@ -57,14 +63,20 @@ const EnrolledClasses = () => {
                                     Classes <span className='text-blue-600'>{user?.displayName}</span> Enrolled:
                               </p>
                               {classes.map((subArray, subIndex) => (
-                                    <ul key={subIndex}>
+                                    <div key={subIndex}>
                                           {subArray.map((item, index) => (
-                                                <li className='text-xl font-bold text-purple-800 ' key={index}>
+                                                <div key={index}>
+                                                      <ol >
+                                                            <li className='text-xl font-bold text-purple-800 my-2 bg-gray-400 p-4' >
                                                       <input className='mx-4' type='checkbox' id={`checkbox-${subIndex}-${index}`} />
                                                       <label htmlFor={`checkbox-${subIndex}-${index}`}>{item}</label>
                                                 </li>
+                                                      </ol>
+                                                </div>
+
+
                                           ))}
-                                    </ul>
+                                    </div>
                               ))}
                         </div>
                   </div>

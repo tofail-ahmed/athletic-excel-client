@@ -22,6 +22,7 @@ import UserHome from "../pages/DashBoard/UserHome";
 import EnrolledClasses from "../pages/DashBoard/EnrolledClasses";
 import Blog from "../pages/Blog/Blog";
 import Payment from "../pages/DashBoard/Payment";
+import StudentPaymentHistory from "../pages/DashBoard/StudentPaymentHistory";
 
 export const router = createBrowserRouter([
       {
@@ -100,6 +101,10 @@ export const router = createBrowserRouter([
                   {
                         path: 'payment',
                         element: <Payment></Payment>
+                  },
+                  {
+                        path:'paymenthistory',
+                        element:<StudentPaymentHistory></StudentPaymentHistory>
                   }
             ]
 
