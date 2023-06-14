@@ -27,16 +27,7 @@ const Header = () => {
                   {/* <li><Link to='/addclass'>Add Class</Link></li> */}
                   <li><Link to='/dashboard'>DashBoard</Link></li>
                   {/* <li><Link to={isAdmin ? '/dashboard/adminhome' : '/dashboard/userhome'}>Dashboard</Link></li> */}
-                  <li>
-                        <Link to='/dashboard/mycart'>
-                              <button className="btn gap-2">
-
-                                    <BsFillCartFill />
-                                    {/* <div className="badge badge-secondary">+{cart?.length}</div> */}
-                              </button>
-                        </Link>
-                  </li>
-
+                  
                   {
                         user ? <div className="flex" onClick={handleLogOut}> <Button text={"LogOut"}></Button>
 

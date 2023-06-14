@@ -5,7 +5,7 @@ import Footer from '../pages/Home/Home/Shared/Footer/Footer';
 import { useState } from 'react';
 
 const Main = () => {
-      const [isDarkTheme, setIsDarkTheme] = useState(false);
+      const [isDarkTheme, setIsDarkTheme] = useState(true);
 
       // Your app logic
 

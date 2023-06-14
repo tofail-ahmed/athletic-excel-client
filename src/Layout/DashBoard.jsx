@@ -23,6 +23,12 @@ const DashBoard = () => {
                         <div className="drawer-side">
                               <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                               <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
+
+                                    <li><NavLink to='/'>Home</NavLink></li>
+                                    <li><NavLink to='/classes'>Classes</NavLink></li>
+                                    <li><NavLink to='/instructors'>Instructors</NavLink></li>
+                                    <li><NavLink to='/blog'>Blog</NavLink></li>
+                                    <div className="divider"></div>
                                     {/* Sidebar content here */}
                                     {
                                           isAdmin ?
@@ -73,12 +79,8 @@ const DashBoard = () => {
                                                 </>
                                     }
 
-                                    <div className="divider"></div>
+                                   
 
-                                    <li><NavLink to='/'>Home</NavLink></li>
-                                    <li><NavLink to='/classes'>Classes</NavLink></li>
-                                    <li><NavLink to='/instructors'>Instructors</NavLink></li>
-                                    <li><NavLink to='/blog'>Blog</NavLink></li>
                               </ul>
                         </div>
                   </div>
