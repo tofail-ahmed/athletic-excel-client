@@ -5,6 +5,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import CheckOutForm from './CheckOutForm';
 import Loader from '../../components/Loader/Loader';
+import Animation from '../../components/Animation';
 
 
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_PK)
@@ -17,7 +18,8 @@ const Payment = () => {
       const price = parseFloat(total.toFixed(2));
       return (
             <div>
-                  <SectionHeader title={"Pay Here"}></SectionHeader>
+                  {/* <SectionHeader title={"Pay Here"}></SectionHeader> */}
+                  <Animation body={"Pay Here"}></Animation>
                   <Loader></Loader>
                   <Elements stripe={stripePromise}>
 

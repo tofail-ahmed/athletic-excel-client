@@ -52,7 +52,7 @@ const SignUp = () => {
 
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen  bg-transparent">
       <div className="w-full max-w-md">
         <form className="bg-white shadow-md rounded px-8 py-6" onSubmit={handleSubmit(onSubmit)}>
           <h2 className="text-2xl font-bold mb-6 text-center">Registration</h2>
@@ -135,7 +135,7 @@ const SignUp = () => {
             <Button type="submit" text={"SignUp"}></Button>
 
           </div>
-          <p className='text-md font-bold'>Already Registered? <Link className='text-green-400' to={'/login'}>Login</Link></p>
+          <p className='text-md font-bold text-red-300 font-bold'>Already Registered? <Link className='text-green-400' to={'/login'}>Login</Link></p>
         <SocialLogin></SocialLogin>
         </form>
       </div>

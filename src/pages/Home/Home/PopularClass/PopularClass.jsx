@@ -3,6 +3,7 @@ import PopularClassDetails from './PopularClassDetails';
 import SectionHeader from '../../../../components/SectionHeader/SectionHeader';
 import PopularInstructorDetails from './PopularInstructorDetails';
 import Loader from '../../../../components/Loader/Loader';
+import Animation from '../../../../components/Animation';
 
 
 const PopularClass = () => {
@@ -17,9 +18,10 @@ const PopularClass = () => {
       return (
             <div className='my-8'>
                   <div className='mx-auto'>
-                  <SectionHeader
+                  {/* <SectionHeader
                               title={"Popular Classes"}
-                  ></SectionHeader>
+                  ></SectionHeader> */}
+                  <Animation body={"Popular Classes"}></Animation>
                   <Loader></Loader>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-[90vw] mx-auto " >
                         {
@@ -34,9 +36,10 @@ const PopularClass = () => {
                         </div>
                   </div>
                   <div className='mx-auto my-8'>
-                        <SectionHeader
+                        {/* <SectionHeader
                               title={"Popular Instructor"}
-                        ></SectionHeader>
+                        ></SectionHeader> */}
+                         <Animation body={"Popular Instructor"}></Animation>
                         <Loader></Loader>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-[90vw] mx-auto " >
                               {

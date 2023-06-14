@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Loader from '../../components/Loader/Loader';
+import Animation from '../../components/Animation';
 
 const EnrolledClasses = () => {
       const { user } = useContext(AuthContext);
@@ -17,7 +18,8 @@ const EnrolledClasses = () => {
       console.log('classes', classes);
       return (
             <div>
-                  <SectionHeader title={"Enrolled Classes"}></SectionHeader>
+                  {/* <SectionHeader title={"Enrolled Classes"}></SectionHeader> */}
+                  <Animation body={"Enrolled Classes"}></Animation>
                   <Loader></Loader>
                   {/* <div>
 

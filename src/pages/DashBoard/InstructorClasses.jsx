@@ -3,6 +3,7 @@ import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Button from '../../components/Button';
 import Loader from '../../components/Loader/Loader';
+import Animation from '../../components/Animation';
 
 const InstructorClasses = () => {
       const { user } = useContext(AuthContext);
@@ -20,7 +21,8 @@ const InstructorClasses = () => {
       console.log(classes);
       return (
             <div className=' '>
-                  <SectionHeader title={"Class Of Instructor"}></SectionHeader>
+                  {/* <SectionHeader title={"Class Of Instructor"}></SectionHeader> */}
+                  <Animation body={"Class Of Instructor"}></Animation>
                   <Loader></Loader>
                   <table className="min-w-[1200px] mx-auto bg-slate-300 border-gray-300 mb-16">
                         <thead>

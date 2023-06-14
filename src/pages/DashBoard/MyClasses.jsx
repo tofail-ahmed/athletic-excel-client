@@ -6,6 +6,7 @@ import Button from '../../components/Button';
 import Swal from 'sweetalert2';
 import Loader from '../../components/Loader/Loader';
 import { Link } from 'react-router-dom';
+import Animation from '../../components/Animation';
 
 const MyClasses = () => {
       const { user } = useContext(AuthContext);
@@ -48,7 +49,8 @@ const MyClasses = () => {
       }
       return (
             <div>
-                  <SectionHeader title={"Selected Classes"}></SectionHeader>
+                  {/* <SectionHeader title={"Selected Classes"}></SectionHeader> */}
+                  <Animation body={"Selected Classes"}></Animation>
                   <Loader></Loader>
                  <div className='flex justify-between mx-12 mb-4'>
                   <div>

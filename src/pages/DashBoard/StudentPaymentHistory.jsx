@@ -3,6 +3,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import { PaymentRequestButtonElement } from '@stripe/react-stripe-js';
 import Loader from '../../components/Loader/Loader';
+import Animation from '../../components/Animation';
 
 const StudentPaymentHistory = () => {
       const { user } = useContext(AuthContext);
@@ -20,7 +21,8 @@ const StudentPaymentHistory = () => {
 
       return (
             <div>
-                  <SectionHeader title={`${user?.displayName}'s Payment History`}></SectionHeader>
+                  {/* <SectionHeader title={`${user?.displayName}'s Payment History`}></SectionHeader> */}
+                  <Animation body={`${user?.displayName}'s Payment History`}></Animation>
                   <Loader></Loader>
                   <table className="min-w-[1200px] mx-auto bg-slate-300 border-gray-300 mb-16">
                         <thead>

@@ -15,8 +15,8 @@ const DashBoard = () => {
                   <div className="drawer drawer-mobile">
                         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                         <div className="drawer-content">
-                              {/* Page content here */}
-                              <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button ">Open drawer</label>
+                              {/* Page content here */} 
+                              <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button bg-[orange] text-[black] hover:text-[white]">Open DashBoard</label>
                               <SectionHeader title={" DashBoard"}></SectionHeader>
                               <Outlet></Outlet>
                         </div>
@@ -89,3 +89,6 @@ const DashBoard = () => {
 };
 
 export default DashBoard;
+
+
+

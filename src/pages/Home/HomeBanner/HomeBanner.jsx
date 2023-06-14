@@ -7,6 +7,7 @@ import image4 from '../../../assets/home_banner/image4.webp'
 import image5 from '../../../assets/home_banner/image5.webp'
 import image6 from '../../../assets/home_banner/image6.webp'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader';
+import Animation from '../../../components/Animation';
 
 const HomeBanner = () => {
       const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -24,7 +25,8 @@ const HomeBanner = () => {
       return (
             <div className='my-8'> 
                   
-                  <SectionHeader title={"Top Activities"}></SectionHeader>
+                  {/* <SectionHeader title={"Top Activities"}></SectionHeader> */}
+                  <Animation body={"Top Activities"}></Animation>
                   <div className="image-grid mx-24">
                   {images.map((image, index) => (
                         <div

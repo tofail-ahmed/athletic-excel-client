@@ -4,6 +4,7 @@ import useAxiosSecure from '../../Hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import Button from '../../components/Button';
 import Loader from '../../components/Loader/Loader';
+import Animation from '../../components/Animation';
 
 const ManageClasses = () => {
 
@@ -51,7 +52,8 @@ const ManageClasses = () => {
       console.log(classes);
       return (
             <div>
-                  <SectionHeader title={"Manage Classes"}></SectionHeader>
+                  {/* <SectionHeader title={"Manage Classes"}></SectionHeader> */}
+                  <Animation body={"Manage Classes"}></Animation>
                   <Loader></Loader>
                   <table className="min-w-[1200px] mx-auto bg-white border border-gray-300">
                         <thead>

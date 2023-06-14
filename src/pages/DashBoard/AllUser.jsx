@@ -6,6 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import Button from "../../components/Button";
 import Loader from "../../components/Loader/Loader";
+import Animation from "../../components/Animation";
 
 const AllUser = () => {
       const [axiosSecure] = useAxiosSecure();
@@ -48,7 +49,8 @@ const AllUser = () => {
 
       return (
             <div>
-                  <SectionHeader title={"All User"}></SectionHeader>
+                  {/* <SectionHeader title={"All User"}></SectionHeader> */}
+                  <Animation body={"All User"}></Animation>
                   <Loader></Loader>
                   <table className="min-w-[1000px] mx-auto  border border-gray-300 mb-12 bg-slate-300 ">
                         <thead>
