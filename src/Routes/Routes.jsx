@@ -23,6 +23,9 @@ import EnrolledClasses from "../pages/DashBoard/EnrolledClasses";
 import Blog from "../pages/Blog/Blog";
 import Payment from "../pages/DashBoard/Payment";
 import StudentPaymentHistory from "../pages/DashBoard/StudentPaymentHistory";
+import AdminRoute from "./AdminRoute";
+import InstructorRoute from "./InstructorRoute";
+
 
 export const router = createBrowserRouter([
       {
@@ -64,15 +67,15 @@ export const router = createBrowserRouter([
             children: [
                   {
                         path:'addclass',
-                        element:<AddClass></AddClass>
+                        element:<InstructorRoute><AddClass></AddClass></InstructorRoute>
                   },
                   {
                         path:"alluser",
-                        element:<AllUser></AllUser>
+                        element:<AdminRoute><AllUser></AllUser></AdminRoute>
                   },
                   {
                         path:'adminhome',
-                        element:<AdminHome></AdminHome>
+                        element:<AdminRoute><AdminHome></AdminHome></AdminRoute>
                   },
                   {
                         path:'instructorhome',
@@ -80,11 +83,11 @@ export const router = createBrowserRouter([
                   },
                   {
                         path:'manageclass',
-                        element:<ManageClasses></ManageClasses>
+                        element:<AdminRoute><ManageClasses></ManageClasses></AdminRoute>
                   },
                   {
                         path:'classbyinstructor',
-                        element:<InstructorClasses></InstructorClasses>
+                        element:<InstructorRoute><InstructorClasses></InstructorClasses></InstructorRoute>
                   },
                   {
                         path: 'myclasses',

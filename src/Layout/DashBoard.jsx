@@ -29,9 +29,7 @@ const DashBoard = () => {
                                                 <>
                                                       <li><NavLink to="/dashboard/adminhome">  <FaHome></FaHome>Admin Home
                                                       </NavLink></li>
-                                                      <li><NavLink to="/dashboard/addclass">
-                                                            <FaUtensils></FaUtensils> Add Class
-                                                      </NavLink></li>
+                                                    
                                                       <li><NavLink to="/dashboard/manageclass">
                                                             <FaIntercom></FaIntercom>
                                                             Manage Classes
