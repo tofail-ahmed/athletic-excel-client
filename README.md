@@ -22,6 +22,7 @@
 ## mongodb as DB
 ## there are also use of animeJS in 404 page
 ## ExpressJS,NodeJS,Axios, etc etc
+## framer motion in section title
 
 
 
