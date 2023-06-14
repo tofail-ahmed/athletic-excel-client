@@ -6,7 +6,7 @@ import { AuthContext } from '../Providers/AuthProvider';
 
 
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://athletic-excel-server.vercel.app',
 });
 
 const useAxiosSecure = () => {

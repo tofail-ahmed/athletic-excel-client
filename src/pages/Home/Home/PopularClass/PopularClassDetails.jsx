@@ -32,7 +32,7 @@ const PopularClassDetails = ({ classItem }) => {
                         <img className="card__image w-[300px] h-[200px] rounded-lg" src={image} alt={name} />
                         <div className="card__content">
                               <h3 className="card__name">{name}</h3>
-                              <p className="card__instructor">Instructor: {instructor.name}</p>
+                              <p className="card__instructor">Instructor: {instructor?.name}</p>
                               <p className="card__available-seats">
                                     Available Seats: {availableSeats}
                               </p>

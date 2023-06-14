@@ -4,6 +4,7 @@ import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import CheckOutForm from './CheckOutForm';
+import Loader from '../../components/Loader/Loader';
 
 
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_PK)
@@ -17,6 +18,7 @@ const Payment = () => {
       return (
             <div>
                   <SectionHeader title={"Pay Here"}></SectionHeader>
+                  <Loader></Loader>
                   <Elements stripe={stripePromise}>
 
                         <CheckOutForm cart={cart} price={price}></CheckOutForm>

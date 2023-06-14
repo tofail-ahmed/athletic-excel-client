@@ -9,7 +9,7 @@ const useInstructor = () => {
       const {data: isInstructor, isLoading: isInstructorLoading} = useQuery({
           queryKey: ['isInstructor', user?.email],
           queryFn: async () => {
-              const res = await axios(`http://localhost:5000/users/instructor/${user?.email}`);
+              const res = await axios(`https://athletic-excel-server.vercel.app/users/instructor/${user?.email}`);
               console.log('is instructor response', res)
               return res.data.instructor;
           }

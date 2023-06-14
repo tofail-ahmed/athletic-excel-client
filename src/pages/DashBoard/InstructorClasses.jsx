@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Button from '../../components/Button';
+import Loader from '../../components/Loader/Loader';
 
 const InstructorClasses = () => {
       const { user } = useContext(AuthContext);
@@ -9,7 +10,7 @@ const InstructorClasses = () => {
 
     
       useEffect(() => {
-            fetch(`http://localhost:5000/classes/instructorClass/${user?.email}`)
+            fetch(`https://athletic-excel-server.vercel.app/classes/instructorClass/${user?.email}`)
                   .then(res => res.json())
                   .then(data => {
                         console.log(data);
@@ -20,6 +21,7 @@ const InstructorClasses = () => {
       return (
             <div className=' '>
                   <SectionHeader title={"Class Of Instructor"}></SectionHeader>
+                  <Loader></Loader>
                   <table className="min-w-[1200px] mx-auto bg-slate-300 border-gray-300 mb-16">
                         <thead>
                               <tr>
@@ -40,15 +42,15 @@ const InstructorClasses = () => {
                               {classes.map((classItem) => (
                                     <tr key={classItem._id} className="hover:bg-gray-100">
                                           <td>
-                                                <img className='w-[100px] h-[100px] m-2 rounded-e-full' src={classItem.image} alt="" />
+                                                <img className='w-[100px] h-[100px] m-2 rounded-e-full' src={classItem?.image} alt="" />
                                           </td>
-                                          <td className="py-4 px-2 border-b text-center">{classItem.name}</td>
-                                          <td className="py-4 px-2 border-b text-center">{classItem.instructor.name}</td>
-                                          <td className="py-4 px-2 border-b text-center">{classItem.instructor.email}</td>
-                                          <td className="py-4 px-2 border-b text-center">{classItem.availableSeats || classItem.seatsAvailable}</td>
-                                          <td className="py-4 px-2 border-b text-center">{classItem.price}</td>
-                                          <td className="py-4 px-2 border-b text-center">{classItem.status === "approved" ? "Approved" : classItem.status === "denied" ? "Denied" : "pending"}</td>
-                                          <td className="py-4 px-2 border-b text-center">{classItem.students ? classItem.students : 0}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.name}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.instructor.name}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.instructor.email}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.availableSeats || classItem?.seatsAvailable}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.price}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.status === "approved" ? "Approved" : classItem?.status === "denied" ? "Denied" : "pending"}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.students ? classItem?.students : 0}</td>
 
 
                                           <td>

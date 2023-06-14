@@ -8,7 +8,7 @@ import Loader from '../../../../components/Loader/Loader';
 const PopularClass = () => {
       const [classes, setClasses] = useState([]);
       useEffect(() => {
-            fetch('http://localhost:5000/sixclasses').then(res => res.json()).then(data => {
+            fetch('https://athletic-excel-server.vercel.app/sixclasses').then(res => res.json()).then(data => {
                   setClasses(data)
             })
       }
@@ -18,7 +18,7 @@ const PopularClass = () => {
             <div className='my-8'>
                   <div className='mx-auto'>
                   <SectionHeader
-                              title={"Poplar Classes"}
+                              title={"Popular Classes"}
                   ></SectionHeader>
                   <Loader></Loader>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-[90vw] mx-auto " >
@@ -35,7 +35,7 @@ const PopularClass = () => {
                   </div>
                   <div className='mx-auto my-8'>
                         <SectionHeader
-                              title={"Poplar Classes"}
+                              title={"Popular Instructor"}
                         ></SectionHeader>
                         <Loader></Loader>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-[90vw] mx-auto " >

@@ -5,6 +5,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import Button from "../../components/Button";
+import Loader from "../../components/Loader/Loader";
 
 const AllUser = () => {
       const [axiosSecure] = useAxiosSecure();
@@ -16,7 +17,7 @@ const AllUser = () => {
 
 
       const handleMakeAdmin = user => {
-            fetch(`http://localhost:5000/users/admin/${user._id}`, {
+            fetch(`https://athletic-excel-server.vercel.app/users/admin/${user?._id}`, {
                   method: 'PATCH'
             })
                   .then(res => res.json())
@@ -24,12 +25,12 @@ const AllUser = () => {
                         console.log(data)
                         if (data.modifiedCount) {
                               refetch();
-                              alert(`${user.name} is an Admin Now!`)
+                              alert(`${user?.name} is an Admin Now!`)
                         }
                   })
       }
       const handleMakeInstructor = user => {
-            fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+            fetch(`https://athletic-excel-server.vercel.app/users/instructor/${user._id}`, {
                   method: 'PATCH'
             })
                   .then(res => res.json())
@@ -37,7 +38,7 @@ const AllUser = () => {
                         console.log(data)
                         if (data.modifiedCount) {
                               refetch();
-                              alert(`${user.name} is an Instructor Now!`)
+                              alert(`${user?.name} is an Instructor Now!`)
                         }
                   })
       }
@@ -48,6 +49,7 @@ const AllUser = () => {
       return (
             <div>
                   <SectionHeader title={"All User"}></SectionHeader>
+                  <Loader></Loader>
                   <table className="min-w-[1000px] mx-auto  border border-gray-300 mb-12 bg-slate-300 ">
                         <thead>
                               <tr>
@@ -61,14 +63,14 @@ const AllUser = () => {
                         <tbody>
                               {users.map((user) => (
                                     <tr key={user._id} className="hover:bg-gray-100">
-                                          <td className="py-4 px-4 border-b">{user.name}</td>
-                                          <td className="py-4 px-4 border-b">{user.email}</td>
-                                          <td className="py-4 px-4 border-b">{user.role==='admin'?"Admin":user.role==='instructor'?"Instructor":"Student"}</td>
-                                          <td >{user.role === 'admin' ? 'Admin' :
+                                          <td className="py-4 px-4 border-b">{user?.name}</td>
+                                          <td className="py-4 px-4 border-b">{user?.email}</td>
+                                          <td className="py-4 px-4 border-b">{user?.role === 'admin' ? "Admin" : user?.role === 'instructor' ? "Instructor" : "Student"}</td>
+                                          <td >{user?.role === 'admin' ? 'Admin' :
                                                 // <button onClick={() => handleMakeAdmin(user)} ><FaUserShield></FaUserShield></button>
                                                 <Button text={"Make Admin"} onClick={() => handleMakeAdmin(user)} ></Button>
                                           }</td>
-                                          <td >{user.role === 'instructor' ? 'Instructor' :
+                                          <td >{user?.role === 'instructor' ? 'Instructor' :
                                                
                                                 <Button text={"Make Instructor"} onClick={() => handleMakeInstructor(user)} ></Button>
                                           }</td>

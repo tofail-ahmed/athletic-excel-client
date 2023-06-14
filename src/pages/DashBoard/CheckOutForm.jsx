@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import { AuthContext } from "../../Providers/AuthProvider";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import Loader from "../../components/Loader/Loader";
 
 
 const CheckoutForm = ({ cart, price }) => {
@@ -108,6 +109,7 @@ const CheckoutForm = ({ cart, price }) => {
       return (
             <>
                   <form className="w-2/3 m-8" onSubmit={handleSubmit}>
+                        <Loader></Loader>
                         <CardElement
                               options={{
                                     style: {

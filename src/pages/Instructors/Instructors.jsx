@@ -8,7 +8,7 @@ const Instructors = () => {
       const { loading } = useContext(AuthContext)
       const [classes, setClasses] = useState([]);
       useEffect(() => {
-            fetch('http://localhost:5000/approvedclasses').then(res => res.json()).then(data => {
+            fetch('https://athletic-excel-server.vercel.app/approvedclasses').then(res => res.json()).then(data => {
                   setClasses(data)
             })
       }
@@ -24,7 +24,7 @@ const Instructors = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-[90vw] mx-auto" >
                         {
-                              classes.map(classItem =>
+                              classes?.map(classItem =>
                                     <InstructorDetails
                                           key={classItem._id}
                                           classItem={classItem}

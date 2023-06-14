@@ -20,7 +20,7 @@ const ClassDetails = ({ classItem }) => {
       console.log("from classdetails", selectedClasses);
       const handleSelect = (classItem) => {
 
-            if (selectedClasses.includes(classItem._id)) {
+            if (selectedClasses.includes(classItem?._id)) {
                   return
             }
 
@@ -29,7 +29,7 @@ const ClassDetails = ({ classItem }) => {
                   const cartItem = {
                         classId: _id, name, price, image, email: user.email, instructor: instructor
                   }
-                  fetch("http://localhost:5000/carts", {
+                  fetch("https://athletic-excel-server.vercel.app/carts", {
                         method: "POST",
                         headers: {
                               "content-type": "application/json"
@@ -76,7 +76,7 @@ const ClassDetails = ({ classItem }) => {
                         <img className="card__image w-[300px] h-[200px] rounded-lg" src={image} alt={name} />
                         <div className="card__content">
                               <h3 className="card__name">{name}</h3>
-                              <p className="card__instructor">Instructor: {instructor.name}</p>
+                              <p className="card__instructor">Instructor: {instructor?.name}</p>
                               <p className="card__available-seats">
                                     Available Seats: {availableSeats}
                               </p>
@@ -84,7 +84,7 @@ const ClassDetails = ({ classItem }) => {
                               <p className="card__price">Students: {students}</p>
 {/*--------------------------- Button will disable after select and will enabled after delete from cart------------------------------- */}
                               <div >
-                                    <Button text={"Select"} disabled={availableSeats === 0 || selectedClasses.includes(classItem._id)} onClick={() => handleSelect(classItem)}></Button>
+                                    <Button text={"Select"} disabled={availableSeats === 0 || selectedClasses.includes(classItem?._id)} onClick={() => handleSelect(classItem)}></Button>
                               </div>
                         </div>
                   </div>

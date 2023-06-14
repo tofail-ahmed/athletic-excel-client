@@ -23,8 +23,9 @@ import EnrolledClasses from "../pages/DashBoard/EnrolledClasses";
 import Blog from "../pages/Blog/Blog";
 import Payment from "../pages/DashBoard/Payment";
 import StudentPaymentHistory from "../pages/DashBoard/StudentPaymentHistory";
-import AdminRoute from "./AdminRoute";
+
 import InstructorRoute from "./InstructorRoute";
+import AdminRoute from "./AdminRoute";
 
 
 export const router = createBrowserRouter([
@@ -75,7 +76,7 @@ export const router = createBrowserRouter([
                   },
                   {
                         path:'adminhome',
-                        element:<AdminRoute><AdminHome></AdminHome></AdminRoute>
+                        element:<AdminHome></AdminHome>
                   },
                   {
                         path:'instructorhome',

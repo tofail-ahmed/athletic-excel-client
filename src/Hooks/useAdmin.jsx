@@ -12,7 +12,7 @@ const useAdmin = () => {
     const {data: isAdmin, isLoading: isAdminLoading} = useQuery({
         queryKey: ['isAdmin', user?.email],
         queryFn: async () => {
-            const res = await axios(`http://localhost:5000/users/admin/${user?.email}`);
+            const res = await axios(`https://athletic-excel-server.vercel.app/users/admin/${user?.email}`);
             console.log('is admin response', res)
             return res.data.admin;
         }

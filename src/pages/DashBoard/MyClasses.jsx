@@ -29,7 +29,7 @@ const MyClasses = () => {
                   confirmButtonText: 'Yes, delete it!'
               }).then((result) => {
                   if (result.isConfirmed) {
-                      fetch(`http://localhost:5000/carts/${classItem._id}`, {
+                        fetch(`https://athletic-excel-server.vercel.app/carts/${classItem?._id}`, {
                           method: 'DELETE'
                       })
                           .then(res => res.json())
@@ -74,15 +74,15 @@ const MyClasses = () => {
                         </thead>
                         <tbody>
                               {cart.map((classItem) => (
-                                    <tr key={classItem._id} className="hover:bg-gray-100">
+                                    <tr key={classItem?._id} className="hover:bg-gray-100">
                                           <td>
-                                                <img className='w-[100px] h-[100px] m-2 rounded-e-full' src={classItem.image} alt="" />
+                                                <img className='w-[100px] h-[100px] m-2 rounded-e-full' src={classItem?.image} alt="" />
                                           </td>
-                                          <td className="py-4 px-2 border-b text-center">{classItem.name}</td>
-                                          <td className="py-4 px-2 border-b text-center">{classItem.instructor?.name}</td>
-                                          <td className="py-4 px-2 border-b text-center">{classItem.instructor?.email}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.name}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.instructor?.name}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.instructor?.email}</td>
 
-                                          <td className="py-4 px-2 border-b text-center">{classItem.price}</td>
+                                          <td className="py-4 px-2 border-b text-center">{classItem?.price}</td>
 
 
 

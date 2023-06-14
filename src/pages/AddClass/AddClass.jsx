@@ -36,7 +36,7 @@ const AddClass = () => {
                   return;
             }
 
-            axios.post('http://localhost:5000/classes', classData)
+            axios.post('https://athletic-excel-server.vercel.app/classes', classData)
                   .then(res => {
                         console.log(classData);
                         console.log('Class created successfully', res.data);
